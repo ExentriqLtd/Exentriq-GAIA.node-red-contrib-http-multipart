@@ -146,14 +146,12 @@ module.exports = function(RED) {
                 this.warn(RED._("httpInMultipart.errors.missing-path"));
                 return;
             }
-            console.log(n.owner);
             if(n.owner){
         	this.url = "/"+n.owner+n.url;
             }
             else{
         	this.url = n.url;
             }
-            console.log(this.url);
             this.method = n.method;
             this.swaggerDoc = n.swaggerDoc;
             this.fields = n.fields;

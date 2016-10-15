@@ -98,7 +98,12 @@
                 } else {
                     root += this.url;
                 }
-                return "["+this.method+"] "+root;
+                if(this.owner){
+                    return "["+this.method+"] /"+this.owner + root;
+                }
+                else{
+                    return "["+this.method+"] "+root;
+                }
             } else {
                 return "http";
             }
